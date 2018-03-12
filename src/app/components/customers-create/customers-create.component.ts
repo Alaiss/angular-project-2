@@ -10,11 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CustomersCreateComponent implements OnInit {
 
-  private newcust:Customer;
+  public newcust:Customer;
 
-  constructor(private m: DataManagerService,
-              private router: Router,
-              private route: ActivatedRoute) 
+  constructor(public m: DataManagerService,
+              public router: Router,
+              public route: ActivatedRoute) 
               { 
                 this.newcust={id:null, firstname:"", lastname:"", city:"", birthdate:"", email:"", website:"", credits:0};
               }

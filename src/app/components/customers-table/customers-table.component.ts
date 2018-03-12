@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class CustomersTableComponent implements OnInit {
 
-  private customers: Customer[];
-  private selectedCust: Customer;
+  public customers: Customer[];
+  public selectedCust: Customer;
   // Assuming that the component 
   // has a property/field named "customers"...
   constructor(private m: DataManagerService,

@@ -10,11 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CustomersDetailComponent implements OnInit {
 
-  private customer: Customer;
+  public customer: Customer;
 
-  constructor(private m: DataManagerService,
-              private router: Router,
-              private route: ActivatedRoute) 
+  constructor(public m: DataManagerService,
+              public router: Router,
+              public route: ActivatedRoute) 
               {
                 let id = this.route.snapshot.params['id'];
                 this.customer = m.getCustomer(id);
