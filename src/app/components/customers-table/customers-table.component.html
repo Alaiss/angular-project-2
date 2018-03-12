@@ -1,0 +1,25 @@
+<h1>Customers</h1>
+<div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-bordred table-striped" id="customersTable">
+        <thead>
+          <tr>
+            <th class="table-heading">First name</th>
+            <th class="table-heading">Last name</th>
+            <th class="table-heading">City</th>
+            <th id="ID" class="hidden">Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr appHighlight *ngFor="let c of customers" (click)="selectRow(c)">
+            <td>{{c.lastname}}</td>
+            <td>{{c.firstname}}</td>
+            <td>{{c.city}}</td>
+            <td class="hidden">{{c.id}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

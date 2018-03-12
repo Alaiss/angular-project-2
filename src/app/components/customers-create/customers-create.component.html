@@ -1,0 +1,67 @@
+<div class="w-75 p-3">
+  <div class="row">
+    <h1>Create new customer</h1>
+    <dl class="dl-horizontal">
+      <div class="form-group">
+        <dt>First name</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.firstname" type="text" #first>
+          </div>
+        </dd>
+      </div>
+      <div class="form-group">
+        <dt>Last name</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.lastname" type="text" #last>
+          </div>
+        </dd>
+      </div>
+      <div class="form-group">
+        <dt>City</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.city" type="text" #city>
+          </div>
+        </dd>
+      </div>
+      <div class="form-group">
+        <dt>Email</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.email" type="email" placeholder="Must be a valid email address" #email>
+          </div>
+        </dd>
+      </div>
+      <div class="form-group">
+        <dt>Web site</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.website" type="url" placeholder="Must be a valid URL" #url>
+          </div>
+        </dd>
+      </div>
+      <div class="form-group">
+        <dt>Birth date</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.birthdate" type="date" placeholder="If in Firefox and Chrome, click here for a date picker" #birthdate>
+          </div>
+        </dd>
+      </div>
+      <div class="form-group">
+        <dt>Credits</dt>
+        <dd>
+          <div>
+            <input class="form-control" [(ngModel)]="newcust.credits" type="number" min="1000" max="9999" placeholder="A number betweeen 1000 and 9999" #credits>
+          </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- idk width why r u like this -->
+  <button class="btn btn-default" (click)='this.router.navigate(["/customers"])'>Back to list</button>
+  <button class="btn btn-primary" (click)='this.m.createCustomer(newcust)' (click)='this.router.navigate(["/customers"])'>Create new customer</button>
+  <!-- WOOOOOOOOOOOOOOOOOOOOOOOOOOO MAGIC  -->

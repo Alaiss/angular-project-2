@@ -1,0 +1,71 @@
+<div class="w-75 p-3">
+    <div class="row">
+      <div class="panel panel-heading">
+      <h1>Edit customer - {{customer.firstname}} {{customer.lastname}}</h1>
+      <h4>Make changes, and click the save button</h4>
+    </div>
+      <dl class="dl-horizontal">
+        <div class="form-group">
+          <dt>First name</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.firstname" type="text">
+            </div>
+          </dd>
+        </div>
+        <div class="form-group">
+          <dt>Last name</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.lastname" type="text">
+            </div>
+          </dd>
+        </div>
+        <div class="form-group">
+          <dt>City</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.city" type="text">
+            </div>
+          </dd>
+        </div>
+        <div class="form-group">
+          <dt>Email</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.email" type="email">
+            </div>
+          </dd>
+        </div>
+        <div class="form-group">
+          <dt>Web site</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.website" type="url">
+            </div>
+          </dd>
+        </div>
+        <div class="form-group">
+          <dt>Birth date</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.birthdate" type="date">
+            </div>
+          </dd>
+        </div>
+        <div class="form-group">
+          <dt>Credits</dt>
+          <dd>
+            <div>
+              <input class="form-control" [(ngModel)]="customer.credits" type="number" min="1000" max="9999">
+            </div>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+  <button class="btn btn-default" (click)='this.router.navigate(["/customers"])'>Back to list</button>
+  <button class="btn btn-default" (click)='this.router.navigate(["/customers"])'>Back to details</button>
+  <button class="btn btn-primary" (click)='this.m.editCustomer(customer)' (click)='this.router.navigate(["/customerdetail", customer.id])'>Save customer</button>
+  <!-- Save button -->
+<!-- make it exchange data -->
